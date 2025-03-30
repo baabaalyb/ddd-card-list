@@ -8,8 +8,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
 /**
  * `ddd-card-list`
- * 
- * @demo index.html
+ * * @demo index.html
  * @element ddd-card-list
  */
 export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
@@ -33,6 +32,8 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
         "/../",
       locales: ["ar", "es", "hi", "zh"],
     });
+    this.accentColor = "#f0f0f0"; // Default accent color
+    this.primaryColor = "7"; // Default primary color
   }
 
   // Lit reactive properties
@@ -40,6 +41,8 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
+      accentColor: { type: String, attribute: 'data-accent' },
+      primaryColor: { type: String, attribute: 'data-primary' },
     };
   }
 
@@ -48,10 +51,11 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       :host {
-        display: block;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
-        font-family: var(--ddd-font-navigation);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+        padding: 16px;
+        background-color: var(--card-list-accent, ${this.accentColor});
       }
       .wrapper {
         margin: var(--ddd-spacing-2);
