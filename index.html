@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DDD Card Demo</title>
     <script type="module" src="./ddd-card-list.js"></script>
-    <script type="module" src="./ddd-card.js"></script>
+    <script type="module" src="./src/ddd-card.js"></script> 
     <style>
       body {
         font-family: sans-serif;
@@ -18,203 +18,128 @@
     <ddd-card-list data-accent="#f0f0f0" data-primary="7">
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Abington Campus" />
-        <div class="card-content">
-          <h2>Abington</h2>
-          <p>Close to Philadelphia, Penn State Abington's suburban campus offers bachelor's degrees, athletics, and a diverse student community.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Abington</div>
+        <div slot="description">Close to Philadelphia, Penn State Abington's suburban campus offers bachelor's degrees, athletics, and a diverse student community.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Altoona Campus" />
-        <div class="card-content">
-          <h2>Altoona</h2>
-          <p>In central Pennsylvania close to University Park, Penn State Altoona offers the appeal of a small college with the prestige of a major research university.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Altoona</div>
+        <div slot="description">In central Pennsylvania close to University Park, Penn State Altoona offers the appeal of a small college with the prestige of a major research university.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Beaver Campus" />
-        <div class="card-content">
-          <h2>Beaver</h2>
-          <p>Situated on one hundred acres, Penn State Beaver offers several bachelor's degrees, on-campus housing, and varsity sports, all within easy reach of Pittsburgh.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Beaver</div>
+        <div slot="description">Situated on one hundred acres, Penn State Beaver offers several bachelor's degrees, on-campus housing, and varsity sports, all within easy reach of Pittsburgh.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Behrend Campus" />
-        <div class="card-content">
-          <h2>Behrend</h2>
-          <p>Located in northwestern Pennsylvania, Penn State Behrend offers undergraduate and graduate degrees, research experiences, on-campus living, and athletics.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Behrend</div>
+        <div slot="description">Located in northwestern Pennsylvania, Penn State Behrend offers undergraduate and graduate degrees, research experiences, on-campus living, and athletics.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Berks Campus" />
-        <div class="card-content">
-          <h2>Berks</h2>
-          <p>Penn State Berks offers bachelor's degrees and four associate programs with small classes, internships, undergraduate research opportunities, and residential campus life.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Berks</div>
+        <div slot="description">Penn State Berks offers bachelor's degrees and four associate programs with small classes, internships, undergraduate research opportunities, and residential campus life.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Brandywine Campus" />
-        <div class="card-content">
-          <h2>Brandywine</h2>
-          <p>Penn State Brandywine is all about the highest quality in teaching, research, scholarship, and service to the campus, students, and the Delaware County community.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Brandywine</div>
+        <div slot="description">Penn State Brandywine is all about the highest quality in teaching, research, scholarship, and service to the campus, students, and the Delaware County community.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Carlisle Campus" />
-        <div class="card-content">
-          <h2>Carlisle</h2>
-          <p>Dickinson Law, located in Carlisle, offers study in various types of law and across disciplines.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Carlisle</div>
+        <div slot="description">Dickinson Law, located in Carlisle, offers study in various types of law and across disciplines.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Dubois Campus" />
-        <div class="card-content">
-          <h2>Dubois</h2>
-          <p>Penn State DuBois prepares leaders through cutting-edge technology, faculty expertise, and dedication to excellence in a small-town setting in north-central Pennsylvania.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Dubois</div>
+        <div slot="description">Penn State DuBois prepares leaders through cutting-edge technology, faculty expertise, and dedication to excellence in a small-town setting in north-central Pennsylvania.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Fayette Campus" />
-        <div class="card-content">
-          <h2>Fayette</h2>
-          <p>Penn State Fayette offers two- and four-year degrees, professional certificates, and lifelong learning programs on its 100-acre Laurel Highlands campus.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Fayette</div>
+        <div slot="description">Penn State Fayette offers two- and four-year degrees, professional certificates, and lifelong learning programs on its 100-acre Laurel Highlands campus.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Great Valley Campus" />
-        <div class="card-content">
-          <h2>Great Valley</h2>
-          <p>Penn State Great Valley School of Graduate Professional Studies delivers world-class graduate degrees and professional development.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Great Valley</div>
+        <div slot="description">Penn State Great Valley School of Graduate Professional Studies delivers world-class graduate degrees and professional development.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Greater Allegheny Campus" />
-        <div class="card-content">
-          <h2>Greater Allegheny</h2>
-          <p>Penn State Greater Allegheny is a residential campus close to Pittsburgh with four-year degrees, a diverse international student body, athletics, and more.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Greater Allegheny</div>
+        <div slot="description">Penn State Greater Allegheny is a residential campus close to Pittsburgh with four-year degrees, a diverse international student body, athletics, and more.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Harrisburg Campus" />
-        <div class="card-content">
-          <h2>Harrisburg</h2>
-          <p>Penn State Harrisburg offers undergraduate and graduate programs, internships, research opportunities, award-winning faculty, on-campus housing, and athletics.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Harrisburg</div>
+        <div slot="description">Penn State Harrisburg offers undergraduate and graduate programs, internships, research opportunities, award-winning faculty, on-campus housing, and athletics.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Hazleton Campus" />
-        <div class="card-content">
-          <h2>Hazleton</h2>
-          <p>Located in northeastern Pennsylvania, Penn State Hazleton is a 104-acre scenic campus overlooking the Conyngham valley, located near Interstates 80 and 81.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Hazleton</div>
+        <div slot="description">Located in northeastern Pennsylvania, Penn State Hazleton is a 104-acre scenic campus overlooking the Conyngham valley, located near Interstates 80 and 81.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Hershey Campus" />
-        <div class="card-content">
-          <h2>Hershey</h2>
-          <p>Penn State Health Milton S. Hershey Medical Center, Penn State College of Medicine, and Penn State Health Children's Hospital enhance quality of life while training future health care professionals.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Hershey</div>
+        <div slot="description">Penn State Health Milton S. Hershey Medical Center, Penn State College of Medicine, and Penn State Health Children's Hospital enhance quality of life while training future health care professionals.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Lehigh Valley Campus" />
-        <div class="card-content">
-          <h2>Lehigh Valley</h2>
-          <p>Penn State Lehigh Valley offers a world-class education and opportunities both in and out of the classroom on a small campus in the Center Valley.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Lehigh Valley</div>
+        <div slot="description">Penn State Lehigh Valley offers a world-class education and opportunities both in and out of the classroom on a small campus in the Center Valley.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Mont Alto Campus" />
-        <div class="card-content">
-          <h2>Mont Alto</h2>
-          <p>Penn State Mont Alto integrates individualized teaching, research, and dynamic community outreach on a wooded campus in Franklin County.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Mont Alto</div>
+        <div slot="description">Penn State Mont Alto integrates individualized teaching, research, and dynamic community outreach on a wooded campus in Franklin County.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="New Kensington Campus" />
-        <div class="card-content">
-          <h2>New Kensington</h2>
-          <p>Just seventeen miles from Pittsburgh, Penn State New Kensington offers an array of degrees, undergraduate research, clubs, and athletics.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">New Kensington</div>
+        <div slot="description">Just seventeen miles from Pittsburgh, Penn State New Kensington offers an array of degrees, undergraduate research, clubs, and athletics.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Schuylkill Campus" />
-        <div class="card-content">
-          <h2>Schuylkill</h2>
-          <p>Penn State Schuylkill in east-central Pennsylvania offers sought-after degrees, a robust co-op program, internships, research opportunities, athletics, and on-campus apartments.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Schuylkill</div>
+        <div slot="description">Penn State Schuylkill in east-central Pennsylvania offers sought-after degrees, a robust co-op program, internships, research opportunities, athletics, and on-campus apartments.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Scranton Campus" />
-        <div class="card-content">
-          <h2>Scranton</h2>
-          <p>Located on forty-five acres outside of Scranton, Penn State Scranton strives to provide innovative instruction and help you achieve your potential.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Scranton</div>
+        <div slot="description">Located on forty-five acres outside of Scranton, Penn State Scranton strives to provide innovative instruction and help you achieve your potential.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Shenango Campus" />
-        <div class="card-content">
-          <h2>Shenango</h2>
-          <p>On fifteen acres in downtown Sharon, Penn State Shenango is committed to the success of its students and serving the people of northwestern Pennsylvania.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Shenango</div>
+        <div slot="description">On fifteen acres in downtown Sharon, Penn State Shenango is committed to the success of its students and serving the people of northwestern Pennsylvania.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="University Park Campus" />
-        <div class="card-content">
-          <h2>University Park</h2>
-          <p>As the largest Penn State campus, Penn State University Park offers academics, activities, and recreation in the classic college town of State College.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">University Park</div>
+        <div slot="description">As the largest Penn State campus, Penn State University Park offers academics, activities, and recreation in the classic college town of State College.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Wilkes-Barre Campus" />
-        <div class="card-content">
-          <h2>Wilkes-Barre</h2>
-          <p>Penn State Wilkes-Barre offers bachelor's and associate degrees on a scenic estate close to Wilkes-Barre.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Wilkes-Barre</div>
+        <div slot="description">Penn State Wilkes-Barre offers bachelor's and associate degrees on a scenic estate close to Wilkes-Barre.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="Williamsport Campus" />
-        <div class="card-content">
-          <h2>Williamsport</h2>
-          <p>As a Penn State affiliate, Pennsylvania College of Technology has a national reputation for workforce development and is a leader in applied technology education.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">Williamsport</div>
+        <div slot="description">As a Penn State affiliate, Pennsylvania College of Technology has a national reputation for workforce development and is a leader in applied technology education.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="World Campus" />
-        <div class="card-content">
-          <h2>World Campus</h2>
-          <p>Penn State World Campus has more than 200 career-focused programs, taught by world-renowned faculty, in a flexible, online course environment.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">World Campus</div>
+        <div slot="description">Penn State World Campus has more than 200 career-focused programs, taught by world-renowned faculty, in a flexible, online course environment.</div>
       </ddd-card>
       <ddd-card>
         <img src="https://live.staticflickr.com/65535/52994966623_c33658e763_w.jpg" alt="York Campus" />
-        <div class="card-content">
-          <h2>York</h2>
-          <p>Located in south central Pennsylvania, Penn State York offers programs to meet the needs of local students, international students, and the community.</p>
-          <button>Explore ></button>
-        </div>
+        <div slot="title">York</div>
+        <div slot="description">Located in south central Pennsylvania, Penn State York offers programs to meet the needs of local students, international students, and the community.</div>
       </ddd-card>
     </ddd-card-list>
   </body>
