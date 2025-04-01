@@ -33,7 +33,7 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
       locales: ["ar", "es", "hi", "zh"],
     });
     this.accentColor = "#f0f0f0";
-    this.primaryColor = "7"; 
+    this.primaryColor = "7";
   }
 
   static get properties() {
@@ -44,7 +44,6 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
       primaryColor: { type: String, attribute: 'data-primary' },
     };
   }
-
 
   static get styles() {
     return [super.styles,
@@ -66,7 +65,6 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
     `];
   }
 
-
   render() {
     return html`
 <div class="wrapper">
@@ -75,7 +73,6 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
 </div>`;
   }
 
- 
   static get haxProperties() {
     return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
       .href;
