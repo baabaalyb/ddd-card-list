@@ -25,7 +25,7 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
           width: 400px;
           border: 1px solid #ccc;
           border-radius: 12px;
-          font-family: "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Open Sans", "Helvetica Neue", sans-serif;
+          font-family: 'Roboto', sans-serif; /* Changed font family to Roboto */
         }
 
         .image-container {
@@ -35,7 +35,8 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
         }
 
         .image-container img {
-          width: 100%;
+          width: 388px;
+          height: 259px;
           display: block;
           object-fit: cover;
         }
@@ -45,12 +46,14 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
           font-size: 28px;
           font-weight: bold;
           color: var(--ddd-theme-default-nittanyNavy);
+          font-family: 'Roboto', sans-serif; /* Changed font family to Roboto */
         }
 
         .description {
           padding: 10px;
           color: var(--ddd-theme-default-coalyGray);
           height: 125px;
+          font-family: 'Roboto', sans-serif; /* Changed font family to Roboto */
         }
 
         .button-container {
@@ -60,7 +63,7 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
 
         button {
           width: 100%;
-          background-color: #224e8a; /* Changed the button color */
+          background-color: #224e8a;
           color: white;
           border: none;
           padding: 12px 20px;
@@ -68,6 +71,7 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
           font-weight: bold;
           border-radius: 5px;
           cursor: pointer;
+          font-family: 'Roboto', sans-serif; /* Changed font family to Roboto */
         }
       `,
     ];
