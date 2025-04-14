@@ -25,7 +25,15 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
           width: 400px;
           border: 1px solid #ccc;
           border-radius: 12px;
-          font-family: 'Roboto', sans-serif; /* Changed font family to Roboto */
+          font-family: 'Roboto', sans-serif;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          background-color: white;
+        }
+
+        .card-container {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
         }
 
         .image-container {
@@ -35,29 +43,28 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
         }
 
         .image-container img {
-          width: 388px;
+          width: 100%;
           height: 259px;
-          display: block;
           object-fit: cover;
+          display: block;
         }
 
         .title-bar {
-          padding: 10px;
+          padding: 16px 16px 0 16px;
           font-size: 28px;
           font-weight: bold;
           color: var(--ddd-theme-default-nittanyNavy);
-          font-family: 'Roboto', sans-serif; /* Changed font family to Roboto */
         }
 
         .description {
-          padding: 10px;
+          flex-grow: 1;
+          padding: 10px 16px;
           color: var(--ddd-theme-default-coalyGray);
-          height: 125px;
-          font-family: 'Roboto', sans-serif; /* Changed font family to Roboto */
+          font-size: 16px;
         }
 
         .button-container {
-          padding: 10px;
+          padding: 16px;
           text-align: center;
         }
 
@@ -71,7 +78,7 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
           font-weight: bold;
           border-radius: 5px;
           cursor: pointer;
-          font-family: 'Roboto', sans-serif; /* Changed font family to Roboto */
+          font-family: 'Roboto', sans-serif;
         }
       `,
     ];
@@ -79,20 +86,22 @@ export class DddCard extends DDDPulseEffectSuper(I18NMixin(DDD)) {
 
   render() {
     return html`
-      <div class="image-container">
-        <img src="${this.image}" alt="${this.title || 'Card image'}" />
+      <div class="card-container">
+        <div class="image-container">
+          <img src="${this.image}" alt="${this.title || 'Card image'}" />
+        </div>
+        <div class="title-bar">${this.title}</div>
+        <div class="description">
+          <slot></slot>
+        </div>
+        ${this.link
+          ? html`
+              <div class="button-container">
+                <button @click=${this.clickEvent}>Explore ></button>
+              </div>
+            `
+          : ''}
       </div>
-      <div class="title-bar">${this.title}</div>
-      <div class="description">
-        <slot></slot>
-      </div>
-      ${this.link
-        ? html`
-            <div class="button-container">
-              <button @click=${this.clickEvent}>Explore ></button>
-            </div>
-          `
-        : ''}
     `;
   }
 

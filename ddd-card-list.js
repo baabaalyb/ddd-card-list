@@ -1,16 +1,7 @@
-/**
- * Copyright 2025 baabaalyb
- * @license Apache-2.0, see LICENSE for full text.
- */
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
-/**
- * `ddd-card-list`
- * * @demo index.html
- * @element ddd-card-list
- */
 export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
   static get tag() {
     return "ddd-card-list";
@@ -19,7 +10,6 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.title = "";
-    this.t = this.t || {};
     this.t = {
       ...this.t,
       title: "Title",
@@ -49,18 +39,40 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
       super.styles,
       css`
         :host {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-          gap: 16px;
+          display: block;
+          background-color: var(--card-list-accent, #f9f9f9);
           padding: 16px;
-          background-color: var(--card-list-accent, ${this.accentColor});
+          font-family: 'Roboto', sans-serif;
         }
+
+        .page-title {
+          font-family: 'Roboto', sans-serif;
+          font-size: 32px;
+          font-weight: bold;
+          margin-left: 16px;
+          margin-bottom: 8px;
+          color: var(--ddd-theme-default-nittanyNavy, #224e8a);
+        }
+
         .wrapper {
-          margin: var(--ddd-spacing-2);
-          padding: var(--ddd-spacing-4);
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
         }
+
         h3 span {
           font-size: var(--ddd-card-list-label-font-size, var(--ddd-font-size-s));
+        }
+
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 24px;
+        }
+
+        ::slotted(ddd-card) {
+          width: 100%;
+          height: 100%;
         }
       `,
     ];
@@ -68,16 +80,28 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
 
   render() {
     return html`
+      <div class="page-title">Campus Locations</div>
       <div class="wrapper">
-        <h3><span>${this.t.title}:</span> ${this.title}</h3>
-        <slot></slot>
+        ${this.title ? html`<h3><span>${this.t.title}:</span> ${this.title}</h3>` : ''}
+        <div class="grid">
+          <slot @slotchange="${this._handleSlotChange}"></slot>
+        </div>
       </div>
     `;
   }
 
+  _handleSlotChange(e) {
+    const slot = e.target;
+    const assignedNodes = slot.assignedNodes().filter(node => node.nodeType === Node.ELEMENT_NODE);
+    assignedNodes.forEach(node => {
+      if (node.tagName.toLowerCase() === 'ddd-card') {
+        node.setAttribute('data-primary', this.primaryColor);
+      }
+    });
+  }
+
   static get haxProperties() {
-    return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
-      .href;
+    return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url).href;
   }
 }
 
